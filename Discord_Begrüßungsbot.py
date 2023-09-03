@@ -43,7 +43,7 @@ random_greetings = get_random_greetings()
 async def on_member_join(member):
   global random_greetings
 
-  embed=discord.Embed(title={random_greetings}, description=f"**{member.mention}**, Willkommen auf **Vanni´s Wolke** :cloud:, schau dich erst einmal um. :kissing_heart:")
+  embed=discord.Embed(title={random_greetings}, description=f"**{member.mention}**, Willkommen auf **Wolke 7** :cloud:, schau dich erst einmal um. :kissing_heart:")
   embed.add_field(name="Wir freuen uns dich auf unserem Server zu sehen.:grin:", value=f"Wir sind jetzt schon {len(set(bot.users))} Mitglieder :raised_hands:!")
   
   member = member.mention
