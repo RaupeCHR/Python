@@ -47,9 +47,20 @@ async def on_member_join(member):
   embed.add_field(name="Wir freuen uns dich auf unserem Server zu sehen.:grin:", value=f"Wir sind jetzt schon {len(set(bot.users))} Mitglieder :raised_hands:!")
   
   member = member.mention
-  channel=bot.get_channel(1110622097241292802)
+  channel=bot.get_channel("Kanal-ID")
+  await channel.send(embed=embed)
+
+@bot.event
+async def on_member_remove(member):
+  channel=bot.get_channel("Kanal-ID")
+  
+  embed=discord.Embed(title="Machs gut war schön das du da warst!", description=f"{member.mention}, ist von der Wolke gefallen.")
+  embed.add_field(name="Wir würden und freuen wenn du wieder kommst.", value=f"Wir sind jetzt nur noch {len(set(bot.users))} Mitglieder!")
+  
+  member = member.mention
+  
   await channel.send(embed=embed)
   
 
 
-bot.run['MTExMDgxOTY2MjMzOTUwNjIyNg.GFvGrl.IZXoe4Z3XcAsVMe2HEfrFuCQs714o5eUomCz70']
+bot.run['bottoken']
